@@ -1,42 +1,87 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fcefee;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #fff3f7;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(91, 57, 63, 0.2);
+}
+
+h1 {
   text-align: center;
+  color: #5b393f;
+  margin-bottom: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.input-tarea,
+.buscador {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-tarea input,
+.buscador input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #f7c7d4;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input-tarea button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #ffb6c1;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.card {
-  padding: 2em;
+.input-tarea button:hover {
+  background-color: #f18fa6;
 }
 
-.read-the-docs {
-  color: #888;
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-tareas li {
+  background-color: #ffe9f1;
+  border: 1px solid #f7c7d4;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-tareas li.completada span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.lista-tareas li .botones button {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #5b393f;
+}
+
+.lista-tareas li .botones button:hover {
+  color: #f18fa6;
 }
